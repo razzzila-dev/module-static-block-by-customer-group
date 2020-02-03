@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="Razzzila\StaticBlockACL\Block\Widget\DynamicGroupData" id="razzzila_static_block_acl">
+        <label>Static Block ACL</label>
+        <description>Static Block With Customer Group ACL</description>
+        <parameters>
+            <parameter name="block_id" xsi:type="block" visible="true" required="true" sort_order="20">
+                <label translate="true">Block</label>
+                <block class="Magento\Cms\Block\Adminhtml\Block\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Block...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+<!--            <parameter name="template" xsi:type="select" visible="true" required="true" sort_order="10">-->
+<!--                <label translate="true">Template</label>-->
+<!--                <options>-->
+<!--                    <option name="default" value="Magento_Cms::widget/static_block/default.phtml" selected="true">-->
+<!--                        <label translate="true">CMS Static Block Default Template</label>-->
+<!--                    </option>-->
+<!--                </options>-->
+<!--            </parameter>-->
+            <parameter name="customer_groups_ids" xsi:type="multiselect" visible="true"
+                       source_model="Magento\Customer\Model\Customer\Source\Group" required="false">
+                <label translate="true">Customer Group</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
