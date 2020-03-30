@@ -4,6 +4,7 @@
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](mailto:dev@nikitaisakov.com?subject=[GitHub]%20Ask%20me%20anything)
 [![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen.svg?style=flat)](https://github.com/razzzila-dev/golang-server-metrix-client/issues)
 
+![FPC support](https://img.shields.io/badge/FPC-supported-green.svg)
 ![Tested on >= Magento 2.3.2](https://img.shields.io/badge/Tested%20on->=%20Magento%202.3.2-f26322.svg)
 ![No DB Migrations](https://img.shields.io/badge/Deploy-No%20DB%20Migrations-26A2AA.svg)
 
@@ -11,7 +12,9 @@ Working with clients sometimes you want to add some privileges for some of them 
 Most simple example is to show the dedicated phone number of support for VIP customers.
 But it could be any content: images, text, even sliders, etc.
 
-So here is the solution for this problem. Since mostly for displaing some content we use the static blocks, I just added new widget which have "Access Controll List" by Customer groups.
+So here is the solution for this problem. Since mostly for displaying some content we use the static blocks, I just added new widget which have "Access Controll List" by Customer groups.
+
+Works with FPC as well.
 
 ## Installation
 ### Package install
