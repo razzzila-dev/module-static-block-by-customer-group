@@ -59,18 +59,10 @@ class StaticBlockByACL extends Block
      * @return bool
      */
     protected function isRenderingAllowed() {
-        return $this->isAllowedForAll()
-            || array_search(
-                $this->getCurrentCustomerGroup(),
-                $this->getAllowedCustomerGroups()
-            ) !==  false;
-    }
-
-    /**
-     * @return bool
-     */
-    protected function isAllowedForAll() {
-        return $this->getData('customer_groups_ids') === '';
+        return array_search(
+            $this->getCurrentCustomerGroup(),
+            $this->getAllowedCustomerGroups()
+        ) !==  false;
     }
 
     /**
